@@ -14,7 +14,6 @@ def calcular_parcela(valor_imovel, valor_entrada, valor_reforco, qtde_reforco, p
     qtde_parcelas = prazo_pagamento - qtde_reforco
     valor_parcela = npf.pmt(reajuste_mensal/100,
                             qtde_parcelas, -valor_financiado, 0, when='begin')
-    # Note que foi corrigido o nome do parâmetro da função npf.pmt()
 
     return valor_parcela
 
@@ -33,7 +32,7 @@ def calcular_lucratividade(valor_imovel, valor_entrada, valor_reforco, qtde_refo
 
 
 # Configurando o layout da página
-st.set_page_config(page_title='Investimentos Imobiliários', layout='wide')
+st.set_page_config(page_title='Calcula Investimento de Compra/Venda de um Imóvel', layout='wide')
 
 # Adicionando o título da página
 st.title('Investimentos Imobiliários')
